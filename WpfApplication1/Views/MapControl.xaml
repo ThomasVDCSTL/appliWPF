@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="WpfApplication1.Views.MapControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+             xmlns:local="clr-namespace:WpfApplication1.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300"
+             >
+    <Grid>
+        <m:Map CredentialsProvider="AmVVJdFNRUaHqXppjB314Eu63GRPsOT2BvLT8geAxsjgv-8RDMgLp9SPOuDr6XYy" Center="45.1847155,5.7250812" ZoomLevel="16" >
+            
+        </m:Map>
+    </Grid>
+</UserControl>
