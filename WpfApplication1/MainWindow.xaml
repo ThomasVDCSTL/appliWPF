@@ -7,17 +7,17 @@
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
         Title="MainWindow" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight"
-        Icon="Icons\pngegg.ico">
+        Icon="Icons/pngegg.ico">
     
-        <!-- <Grid> -->
-        <!--         <Grid.ColumnDefinitions> -->
-        <!--                 <ColumnDefinition Width="500"></ColumnDefinition> -->
-        <!--                 <ColumnDefinition Width="1000"></ColumnDefinition> -->
-        <!--         </Grid.ColumnDefinitions> -->
-        <!--         <views:ResultView Height="900"/> -->
-        <!--         <views:MapControl Grid.Column="1" Height="auto" /> -->
-        <!-- </Grid> -->
-        <views:FormView></views:FormView>
+        <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="500"></ColumnDefinition>
+                        <ColumnDefinition Width="1000"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <views:ResultView Height="900"/>
+                <views:MapControl Grid.Column="1" Height="auto" />
+        </Grid>
+        <!-- <views:FormView></views:FormView> -->
         
     
 </Window>

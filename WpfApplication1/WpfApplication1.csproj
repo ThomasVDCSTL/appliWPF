@@ -99,7 +99,7 @@
         <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Icons\" />
+      <Content Include="Icons\pngegg.ico" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>
