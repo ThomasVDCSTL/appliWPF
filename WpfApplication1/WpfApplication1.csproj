@@ -35,6 +35,9 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="API_TAG_lib">
+          <HintPath>..\..\API_TAG\API_TAG_lib\bin\Debug\API_TAG_lib.dll</HintPath>
+        </Reference>
         <Reference Include="Microsoft.Maps.MapControl.WPF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
           <HintPath>..\packages\Microsoft.Maps.MapControl.WPF.1.0.0.3\lib\net40-Client\Microsoft.Maps.MapControl.WPF.dll</HintPath>
         </Reference>
@@ -54,12 +57,22 @@
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </ApplicationDefinition>
-        <Compile Include="ViewMOd.cs" />
+        <Compile Include="Commands\CommandBase.cs" />
+        <Compile Include="Commands\NavigateCommand.cs" />
+        <Compile Include="Commands\SearchCommand.cs" />
+        <Compile Include="ViewModels\FormViewModel.cs" />
+        <Compile Include="ViewModels\MainViewModel.cs" />
+        <Compile Include="ViewModels\NavigationStore.cs" />
+        <Compile Include="ViewModels\ResultViewModel.cs" />
+        <Compile Include="ViewModels\ViewModelbase.cs" />
         <Compile Include="Views\FormView.xaml.cs">
           <DependentUpon>FormView.xaml</DependentUpon>
         </Compile>
         <Compile Include="Views\MapControl.xaml.cs">
           <DependentUpon>MapControl.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Views\Research_bar.xaml.cs">
+          <DependentUpon>Research_bar.xaml</DependentUpon>
         </Compile>
         <Compile Include="Views\ResultView.xaml.cs">
           <DependentUpon>ResultView.xaml</DependentUpon>
@@ -78,6 +91,7 @@
         </Compile>
         <Page Include="Views\FormView.xaml" />
         <Page Include="Views\MapControl.xaml" />
+        <Page Include="Views\Research_bar.xaml" />
         <Page Include="Views\ResultView.xaml" />
     </ItemGroup>
     <ItemGroup>
@@ -95,7 +109,7 @@
         </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>
-        <None Include="App.config"/>
+        <None Include="App.config" />
         <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>

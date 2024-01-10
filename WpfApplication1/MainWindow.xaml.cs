@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using WpfApplication1.ViewModels;
 
 namespace WpfApplication1
 {
@@ -10,8 +12,6 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
-            ViewMOd niktamer = new ViewMOd();
-            DataContext = niktamer;
         }
     }
 }

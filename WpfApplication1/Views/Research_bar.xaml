@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="WpfApplication1.Views.Research_bar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WpfApplication1.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300" Height="auto" Background="DarkSlateGray">
+    <UserControl.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="150"></Setter>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Margin="10 20 10 20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Longitude :"></TextBlock>
+                <TextBox Grid.Row="1" Text="{Binding Long}"></TextBox>
+            </Grid>
+        </Border>
+        <Border Grid.Column="1" Margin="0 20 10 20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Latitude :"></TextBlock>
+                <TextBox Grid.Row="1" Text="{Binding Lat}"></TextBox>
+            </Grid>
+        </Border>
+        <Border Grid.Column="2" Margin="0 20 10 20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Radius :"></TextBlock>
+                <TextBox Grid.Row="1" Text="{Binding Rad}"></TextBox>
+            </Grid>
+
+        </Border>
+        <Button Command="{Binding Search}" Grid.Row="1" Grid.ColumnSpan="3" Height="40" Margin="10 10 10 20" FontSize="20" Padding="100 3 100 3"> Submit </Button>
+    </Grid>
+</UserControl>

@@ -9,8 +9,14 @@
              d:DesignHeight="300" d:DesignWidth="300"
              >
     <Grid>
-        <m:Map CredentialsProvider="AmVVJdFNRUaHqXppjB314Eu63GRPsOT2BvLT8geAxsjgv-8RDMgLp9SPOuDr6XYy" Center="45.1847155,5.7250812" ZoomLevel="16" >
-            
+        <m:Map CredentialsProvider="AmVVJdFNRUaHqXppjB314Eu63GRPsOT2BvLT8geAxsjgv-8RDMgLp9SPOuDr6XYy" Center="45.185018,5.731507" ZoomLevel="15" >
+            <m:MapItemsControl ItemsSource="{Binding PushPins}" >
+                <m:MapItemsControl.ItemTemplate >
+                    <DataTemplate>
+                        <m:Pushpin Location="{Binding}" Background="Blue" />
+                    </DataTemplate>
+                </m:MapItemsControl.ItemTemplate>
+            </m:MapItemsControl> 
         </m:Map>
     </Grid>
 </UserControl>

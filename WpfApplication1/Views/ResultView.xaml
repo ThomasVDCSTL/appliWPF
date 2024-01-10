@@ -10,29 +10,30 @@
     
     <UserControl.Resources>
         
-        <DataTemplate x:Key="itemKey">
-            <Border  BorderThickness="0 0 0 1" BorderBrush="Black" Height="80" Width="450" >
-                <TextBlock Text="byte" VerticalAlignment="Center" Margin="12,0,0,0" FontSize="24"/>
-            </Border>
-        </DataTemplate>
+        
         
     </UserControl.Resources>
     
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="LightGray">
-            <TextBlock  Text="Results" FontSize="30" Margin="10 10 0 0"></TextBlock>
+            <TextBlock  Text="Results" FontSize="30" Margin="10 10 0 10"></TextBlock>
         </Grid>
-        <ListView Grid.Row="1" Margin="10 10 10 0" BorderThickness="0" >
-            <ListView.Items >
-                <ListViewItem ContentTemplate="{StaticResource itemKey}"/>
-                <ListViewItem ContentTemplate="{StaticResource itemKey}"/>
-                <ListViewItem ContentTemplate="{StaticResource itemKey}"/>
-                <ListViewItem ContentTemplate="{StaticResource itemKey}"/>    
-            </ListView.Items>
+        <ListView Grid.Row="1" Margin="10 10 10 0" BorderThickness="0" ItemsSource="{Binding GetStopsAroundCamp}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border  BorderThickness="0 0 0 1" BorderBrush="Black" Height="80" Width="460" >
+                        <Grid VerticalAlignment="Center" >
+                            <TextBlock Text="{Binding Name}" Margin="12,0,0,0" FontSize="24"/>
+                            <TextBlock Text="{Binding Id}"  HorizontalAlignment="Right" FontSize="12"/>
+                        </Grid>
+                        
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </Grid>
 </UserControl>
